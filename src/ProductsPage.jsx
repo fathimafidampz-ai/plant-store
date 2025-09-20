@@ -56,7 +56,7 @@ function ProductsPage() {
     <div className="full-page">
       <nav className="navbar">
         <div className="logo-block">
-          <h1 className="page-title">Paradise Nursery <span>Plants</span></h1>
+          <h1 className="page-title">Paradise Nursery Plants</h1>
           <p className="slogan">Your Gateway to Green Living.</p>
         </div>
         
