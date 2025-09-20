@@ -201,8 +201,8 @@ html, body {
 
 .cart-badge {
   position: absolute;
-  top: -30px; /* adjust vertically */
-  right: -400px; /* adjust horizontally */
+  top: -30px;   /* slightly above the icon */
+   right: -1030px;/* slightly to the right */
   background-color: red;
   color: white;
   font-size: 12px;
@@ -210,5 +210,6 @@ html, body {
   border-radius: 50%;
   font-weight: bold;
 }
+
 
 
