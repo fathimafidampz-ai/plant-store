@@ -46,11 +46,25 @@ function CartPage() {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+ const handleCheckout = () => {
+    if(cart.length === 0){
+      alert("Your cart is empty!");
+      return;
+    }
+    alert(`Proceeding to checkout. Total: $${totalPrice}`);
+    // you can later navigate to a checkout page if you have one
+    // navigate('/checkout');
+  };
+
+  // handle continue shopping
+  const handleContinueShopping = () => {
+    navigate('/products'); // redirect to product listing page
+  };
 
   return (
     <div className="cart-page">
       <div className="cart-header">
-        <button className="back-button" onClick={() => navigate('/products')}>
+        <button className="back-button" onClick={() => navigate('/')}>
           ⬅ Back to Products
         </button>
         <h1>Your Cart</h1>
@@ -78,11 +92,21 @@ function CartPage() {
                   onClick={() => removeItem(item.id)}
                 >
                   Delete
-                </button>
+                </button>    
               </div>
-            </div>
+          </div>
           ))}
+       
+        <div className="cart-actions">
+          <button className='checkout-button' onClick={handleCheckout}>
+            Checkout
+          </button>
+          <button className='continue-button' onClick={handleContinueShopping}>
+            Continue Shopping
+          </button>
         </div>
+      
+      </div>
       )}
     </div>
   );
